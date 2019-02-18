@@ -4,6 +4,8 @@
 \usepackage[brazil]{babel}
 \usepackage{indentfirst}
 \usepackage[a4paper, margin=2cm ]{geometry}
+\usepackage{graphicx}
+\usepackage{float}
 
 \begin{document}
 
@@ -17,6 +19,12 @@
     \setcounter{page}{1}
     \pagenumbering{Roman}
     \tableofcontents
+    \newpage
+    
+    \listoffigures
+    \newpage
+    
+    \listoftables
     \newpage
     
     \section{section}
@@ -61,5 +69,26 @@
         \item[Second item] Item 2
         \item[Third item] Item 2
     \end{description}
+    
+    \begin{figure}[t]
+        \centering
+        \includegraphics[width=0.5\linewidth]{figure1.png}
+        \caption{Figure 1}
+        \label{fig:fig1}
+    \end{figure}
+    \newline
+    
+    \section{Tables}
+    
+    \begin{table}[]
+        \centering
+        \caption{Table 1}
+        \begin{tabular}{lllll}
+          & 1 & 2 & 3 &  \\
+        a &   &   &   &  \\
+        b &   &   &   &  \\
+        c &   &   &   & 
+        \end{tabular}
+    \end{table}
 
 \end{document}
